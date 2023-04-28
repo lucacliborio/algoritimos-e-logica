@@ -5,8 +5,9 @@
  
  void main(){
  	
- 	float n1, n2, n3, nmaior; 
- 	nmaior = 0;
+ 	float n1, n2, n3, maior; 
+ 	maior = 0;
+ 	
  	
  	printf("Informe o primeiro nuhmero: ");
  	scanf("%f", &n1);
@@ -15,21 +16,19 @@
  	printf("Informe o terceiro nuhmero: ");
  	scanf("%f", &n3);
  	
- 	if (n1 > nmaior){
- 		nmaior = n1;
+ 	if (n1 > maior){
+ 		maior = n1;
 	 }
-	if (n2 > nmaior){
-		nmaior = n2;
-	}
-	else{(n3 > nmaior);
-		nmaior = n3;
-	}
-
+		if (n2 > maior){
+ 		maior = n2;
+	 	}
+		if (n3 > maior){
+		maior = n3;
+		}
+	else{
+		printf("\nOs nuhmeros sao iguais.");
+		}
 	
-	printf("O maior nuhmero eh: %0.0f", nmaior);
 	
-	
- 	
- 	
- 
- }
+	printf("\nO maior nuhmero eh: %f", maior);
+}
