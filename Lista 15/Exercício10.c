@@ -12,9 +12,14 @@ void main(){
 	printf("Informe outro nuhmero: ");
 	scanf("%f", &num2);
 	if (num1 > num2){
-		printf("O maior nuhmero eh: %f", num1);
+		printf("O maior nuhmero eh: %0.0f", num1);
 	} 
 	else{
-		printf("O maior nuhmero eh: %0.0f", num2);
+		if (num1 == num2){
+		printf("Os nuhmero sao iguais.");
+		}
+		else{
+			printf("O maior nuhmeros eh: %0.0f", num2);
+		} 
 	}
 }

@@ -16,19 +16,16 @@
  	printf("Informe o terceiro nuhmero: ");
  	scanf("%f", &n3);
  	
- 	if (n1 > maior){
- 		maior = n1;
-	 }
-		if (n2 > maior){
- 		maior = n2;
-	 	}
-		if (n3 > maior){
-		maior = n3;
-		}
+ 	if (n1  > n2 && n1 > n3 || n1 > n2 && n1 >= n3 || n1 >= n2 && n1 > n3){
+ 		printf("O maior nuhmero eh: %0.2f", n1);
+	} 
+	else if (n2  > n1 && n2 > n3 || n2 > n1 && n2 >= n3 || n2 >= n1 && n2 > n3){
+ 		printf("O maior nuhmero eh: %0.2f", n2);
+	}
+ 	else if (n3  > n1 && n3 > n2 || n3 > n1 && n3 >= n2 || n3 >= n1 && n3 > n2){
+ 		printf("O maior nuhmero eh: %0.2f", n3);	
+	}
 	else{
-		printf("\nOs nuhmeros sao iguais.");
-		}
-	
-	
-	printf("\nO maior nuhmero eh: %f", maior);
+		printf("\nOs nuhmero sao iguais.");
+	} 
 }
