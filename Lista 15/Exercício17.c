@@ -25,23 +25,39 @@ void main(){
 	scanf("%f", &valor);
 	
 	if (codigo == 1){
-		printf("SUL");
+		printf("Sul");
 	}
 	else
 		if(codigo == 2){
-			printf("NORTE");
+			printf("Norte");
 		}
 		else
 			if(codigo == 3){
-				printf("LESTE");
+				printf("Leste");
 			}
 			else
 				if(codigo == 4){
-					printf("OESTE");
+					printf("Oeste");
 				}
 				else
-					if(codigo == 5){
-						
+					if(codigo == 5 || codigo == 6){
+						printf("Nordeste");
 					}
+					else
+						if(codigo == 7 || codigo== 8 || codigo == 9){
+							printf("Sudeste");
+						}
+						else
+							if (codigo >=10 && codigo <=20){
+								printf("Centro-Oeste");
+							}
+							else
+								if(codigo >= 21 && codigo <=30){
+									printf("Noroeste");
+								}
+								else{
+									printf("Cohdigo invahlido.");
+								}
+						
 	
 }
