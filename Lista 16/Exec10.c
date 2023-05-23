@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<stdio.h>
 #include <conio.h>
 
 /*10 - Escreva um programa que leia o primeiro nome e a altura das moças inscritas em um concurso de beleza.
@@ -10,7 +11,7 @@
    void main(){
    	
    	char nome[100];
-   	float alt, resp = 1;
+   	float alt, altmaior, resp = 1;
    	int i = 0;
    	
    	while(resp == 1){
@@ -23,9 +24,19 @@
    		
    		printf("Deseja continuar? 1(Continuar) 2(Parar): ");
    		scanf("%f", &resp);
+   		
+   		i++;
 	}
-    	i++;
+		
+	
+	
+	if (alt > altmaior){
+		altmaior = alt;
+	}
+    	
    	
+   		printf("A mulher mais alta tem a altura de : %0.2f\n", altmaior);
+   		printf("A quantidade de mulheres participantes eh de: %i", i);
    	
    	
    }
