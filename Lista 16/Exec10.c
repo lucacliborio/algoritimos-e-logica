@@ -11,8 +11,8 @@
    void main(){
    	
    	char nome[100];
-   	float alt, altmaior, resp = 1;
-   	int i = 0;
+   	float alt, altmaior = 0;
+   	int i = 0, resp = 1;
    	
    	while(resp == 1){
    		
