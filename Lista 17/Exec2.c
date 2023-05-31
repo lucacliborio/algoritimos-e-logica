@@ -24,29 +24,28 @@
 			scanf("%s", nome);
   			printf("Informe o saldo da conta: ");
   			scanf("%f", &saldo);
-		  }
   		
-  		if(saldo < 0){
-  			printf("Conta: %d\n", conta);
-  			printf("Saldo: %0.2f\n", saldo);
-  			printf("Saldo Negativo!!!\n");
+  			if(saldo < 0){
+  				printf("Conta: %d\n", conta);
+  				printf("Saldo: %0.2f\n", saldo);
+  				printf("Saldo Negativo!!!\n");
   			
-  			saldneg++;
-		  }
-		  else
-		  	if(saldo > 0){
-		  	printf("Conta: %d\n", conta);
-  			printf("Saldo: %0.2f\n", saldo);
-  			printf("Saldo Positivo!!!\n");
-  			
-		  }
-		  else{
-		  	printf("Sem saldo!!!\n");
-		  }
-			
+  				saldneg++;
+		  	}
+		  	else
+		  		if(saldo > 0){
+		  		printf("Conta: %d\n", conta);
+  				printf("Saldo: %0.2f\n", saldo);
+  				printf("Saldo Positivo!!!\n");
+  			}
+		  	else{
+		  		printf("Sem saldo!!!\n");
+		  	}
+		}
 			qtdetotal++;
 			saldototal = saldo + saldototal;
-	  }while(qtdetotal <=10);
+			
+	  }while(qtdetotal <=3 && conta != -999);
 	  
 	  
 	  printf("Qtde de pessoas com saldo negativo: %d\n", saldneg);
