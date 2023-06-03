@@ -14,19 +14,19 @@
 	Elabore um algoritmo que, lendo estes dados, calcule e imprima:
 	- A quantidade de respostas ótimo; ok
 	- A diferença percentual entre respostas bom e regular; --
-	- A média de idade das pessoas que responderam ruim; --
+	- A média de idade das pessoas que responderam ruim; ok
 	- A porcentagem de respostas péssimo e a maior idade que utilizou esta opção; --
 	- A diferença de idade entre a maior idade que respondeu ótimo e a maior idade que respondeu ruim. --
 */
 
 void main(){
 	
-	int i = 1, nota = 0, otimo = 0, bom = 0, regular = 0, ruim = 0, pessimo = 0, idade = 0;
+	int i = 1, nota = 0, otimo = 0, bom = 0, regular = 0, ruim = 0, pessimo = 0, idade = 0, idadetruim = 0, medruim = 0, maioridade = 0, menoridade = 0;
 	float percbr = 0 ;
 	
-	while(i <= 4){
-		//printf("Informe seu idade: ");
-		//scanf("%d", &idade);
+	while(i <= 3){
+		printf("Informe seu idade: ");
+		scanf("%d", &idade);
 		printf("Informe sua nota para o cinema : ");
 		scanf("%d", &nota);
 		
@@ -44,19 +44,24 @@ void main(){
 			
 		if(nota == 4){
 			ruim++;//qtde de votos ruim
+			idadetruim = idade + idadetruim;	
 		}
 
 		if(nota == 5){
 			pessimo++;//qtde de votos pessimo
-	}
+		}
 		i++;
 						
 	}
-	
+	// media idade das pessoas ruim
+	medruim = idadetruim/ruim;
 	//conta porcentagem bom e regular
 	percbr == (bom/regular)*100;
 
 	
-	printf("Qtde de responstas otimo: %0.0d\n", otimo);
-	printf("Diferenca percentual bom e regular: %0.1f%%", percbr);
+	printf("Qtde de respostas otimo: %0.0d\n", otimo);
+	//printf("Diferenca percentual bom e regular: %0.1f%%\n", percbr);--
+	printf("Mehdia de idade das pessoas que responderam ruim: %0.0d\n", medruim);
+	
+	
 }
