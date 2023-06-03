@@ -16,7 +16,7 @@ void main(){
 	int i, sexo, qtde_masculino = 0, cont_mulher = 0;
 	float alt, alt_maior = 0, alt_menor = 0, alt_total = 0, med_alt_total = 0, alt_mulher_total = 0, med_alt_mulher = 0;
 	
-	for(i=1;i<=3;i++){
+	for(i=1;i<=10;i++){
 		printf("Informe sua altura: ");
 		scanf("%f", &alt);
 		printf("Informe seu sexo 1-masculino 2-femino: ");
