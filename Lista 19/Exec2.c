@@ -13,7 +13,7 @@ void main(){
 	int i = 0;
 	float nota = 0, notamaior1 = 0, notamaior2 = 0 , matricula = 0, matriculan1 = 0, matriculan2 = 0;
 	
-	while(i < 5){
+	while(i < 7){
 		printf("Informe sua nota: ");
 		scanf("%f", &nota);
 		printf("Informe seu nuhmero de mahtricula: ");
