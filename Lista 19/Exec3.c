@@ -83,7 +83,7 @@ void main(){
 			nmenor = n3;
 		}
 		
-	}while(i <=2);
+	}while(i <=10);
 	
 	//media da turma
 	medtotal = somamed/(i - 1);
