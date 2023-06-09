@@ -24,7 +24,7 @@ void main(){
 	float percbr = 0, i = 1, nota = 0, otimo = 0, bom = 0, regular = 0, ruim = 0, pessimo = 0, idade = 0, idadetruim = 0, medruim = 0, idademaiorot = 0, idademaioruim = 0, maioridade = 0; 
 	float porcpessimo = 0, maioridadepessimo = 0;
 	
-	while(i <= 4){
+	while(i <= 6){
 		printf("Informe seu idade: ");
 		scanf("%f", &idade);
 		printf("Informe sua nota para o cinema : ");
