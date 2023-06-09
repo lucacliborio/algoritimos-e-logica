@@ -15,23 +15,27 @@
 	- A quantidade de respostas ótimo; ok
 	- A diferença percentual entre respostas bom e regular; --
 	- A média de idade das pessoas que responderam ruim; ok
-	- A porcentagem de respostas péssimo e a maior idade que utilizou esta opção; --
-	- A diferença de idade entre a maior idade que respondeu ótimo e a maior idade que respondeu ruim. --
+	- A porcentagem de respostas péssimo e a maior idade que utilizou esta opção; ok
+	- A diferença de idade entre a maior idade que respondeu ótimo e a maior idade que respondeu ruim. ok
 */
 
 void main(){
 	
-	int i = 1, nota = 0, otimo = 0, bom = 0, regular = 0, ruim = 0, pessimo = 0, idade = 0, idadetruim = 0, medruim = 0, maioridade = 0, menoridade = 0;
-	float percbr = 0 ;
+	float percbr = 0, i = 1, nota = 0, otimo = 0, bom = 0, regular = 0, ruim = 0, pessimo = 0, idade = 0, idadetruim = 0, medruim = 0, idademaiorot = 0, idademaioruim = 0, maioridade = 0; 
+	float porcpessimo = 0, maioridadepessimo = 0;
 	
-	while(i <= 3){
+	while(i <= 4){
 		printf("Informe seu idade: ");
-		scanf("%d", &idade);
+		scanf("%f", &idade);
 		printf("Informe sua nota para o cinema : ");
-		scanf("%d", &nota);
+		scanf("%f", &nota);
 		
 		if(nota == 1){
 			otimo++;//qtde de votos otimo
+			
+			if(idade > idademaiorot){
+			idademaiorot = idade;
+			}
 		}
 	
 		if(nota == 2){
@@ -44,24 +48,52 @@ void main(){
 			
 		if(nota == 4){
 			ruim++;//qtde de votos ruim
-			idadetruim = idade + idadetruim;	
+			idadetruim = idade + idadetruim;
+			
+			if(idade > idademaioruim){
+				idademaioruim = idade;
+			}	
 		}
+			
 
 		if(nota == 5){
 			pessimo++;//qtde de votos pessimo
+			
+			if(idade > maioridadepessimo){
+				maioridadepessimo = idade;
+			}
+		
 		}
 		i++;
 						
 	}
-	// media idade das pessoas ruim
-	medruim = idadetruim/ruim;
-	//conta porcentagem bom e regular
-	percbr == (bom/regular)*100;
+	
+	if(ruim > 0){
+		medruim = idadetruim/ruim; // media idade das pessoas ruim
+	}
+	
+	if(bom > regular){
+		percbr = (bom - regular) /i *100; //conta porcentagem bom e regular
+	}
+	
+	
+	if(bom == regular){
+		percbr = 0; //conta porcentagem bom e regular
+	}
+	
+	
+	//diferença idade maior otima e maior ruim
+	maioridade = idademaiorot-idademaioruim; 
+	
+	//conta porcentagem pessimo
+	porcpessimo = pessimo / (i-1) *100;
 
 	
-	printf("Qtde de respostas otimo: %0.0d\n", otimo);
-	//printf("Diferenca percentual bom e regular: %0.1f%%\n", percbr);--
-	printf("Mehdia de idade das pessoas que responderam ruim: %0.0d\n", medruim);
+	printf("Qtde de respostas otimo: %0.0f\n", otimo);
+	printf("Diferenca percentual bom e regular: %0.1f%%\n", percbr);
+	printf("Mehdia de idade das pessoas que responderam ruim: %0.0f\n", medruim);
+	printf("Porcentagem de votos pessimo e a maior idade que utilizou esta opcao: %0.1f, %0.0f \n", porcpessimo, maioridadepessimo);
+	printf("Diferenca entre a maior idade otima e a maior idade ruim: %0.0f\n", maioridade);
 	
 	
 }
