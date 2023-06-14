@@ -16,5 +16,5 @@
 		 }
 		 i++;
 	 }
-	 printf("O resultado da soma dos nuhmero pares de 0 ate 20 eh: %d\n", soma);
+	 printf("O resultado da soma dos nuhmeros pares de 0 ate 20 eh: %d\n", soma);
  }
